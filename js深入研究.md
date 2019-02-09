@@ -87,3 +87,88 @@ sum(12,32,34,'bb')
 1. 带var 的私有作用域变量提升阶段，都声明为私有变量，和外界没有任何关系
 2. 不带var 不是私有变量，会向它的上级作用域查找，看是否为上级的变量，不是继续向上一级查找，一直找到window 如果window也没有，就会在window中增加一个属性，这个时候等于在全局中增加了一个变量
 3. 这种查找的机制叫做作用域链查找
+
+### 作用域链的拓展
+
+```javascript
+function fn(){
+    b =13;
+    console.log(a,b);//作用域链查找的过程中如果window也没有这个变量相当给window设置一个属性叫做b
+}
+fn();
+console.log(b);
+```
+
+### 条件判断下变量提升的处理和函数表达式不提升
+
+```javascript
+fn();//=>fu not function  //原因：函数表达式不做提升而是在执行到这个函数的时候才开始执行
+sum();
+//匿名函数之函数表达式
+var fn=function(){//变量提升只是提升了函数本身
+    console.log(1)
+}
+//普通函数
+function sum(){
+    console.log(2)
+}
+fn();
+sum();
+
+//当前作用域下不管条件是否成立都会变量提升
+//1.带var 的还是只声明
+//2.带function的在老版本浏览器机制下，声明加定义都处理，但是为了迎合es6的块级作用域，新版本浏览器对于函数，不管条件是否成立，都只是先声明，没有定义，类似var.
+console.log(a)//undefined
+if(1===2){
+    var a=12;
+    
+}
+console.log(a)//undefined
+
+面试题
+f = function(){return  true;}//不带var 等于window.f
+g = function(){return false;}//不带var 等于window.g
+~function(){
+    if(g() &&[]==![]){//1新版浏览器变量提升只提升不赋值，这里报错，2老版本提升赋值。3，[]==![]是true 分析，第一![]强转bool因为[]为true，取反就是false，此时一边是数组一边是布尔，不同类型转为数值,用Number()进行转换，这个时候实际上两边都是0==0 返回为true.g()执行返回也是true，true==true 所以判断继续执行. 4 f没加var 则根据作用域链向外面找，这个时候发现外面的f有，这个时候赋值改变了最外层f这个函数表达式的值。5最后执行的时候发现f()返回的事true
+        f=function(){retrun false;}
+        function g(){return true;}
+    }
+}();
+console.log(f())
+console.log(g())
+//新版本浏览器对函数：变量提升只提升不赋值。老版本浏览器函数：提升且赋值。
+//运算符优先级比较运算比如 ==要大于&&这种关系运算符号，所以先执行的是[]==![] ,同事!是贴身运算符类似++ -- 这种优先级比比较运算还高，所以![]已经做了bool转换.
+//贴身符号>数学>比较关系>逻辑关系>赋值
+
+坑爹行为：
+console.log(fn);//这里新版本只提升不定义，所以执行的时候为undefined
+if(1===1){
+    console.log(fn);//这里大坑。当判断成立的时候，进入到大括号里，这里不是立即执行代码，而是进行类似作用域提升的操作，把fn函数在{}中进行定义和赋值。这个时候执行就返回函数体了。
+    function fn(){
+        console.log('ok')
+    }
+    
+}
+console.log(fn)//赋值了所以为函数体
+```
+
+### 变量和函数重名问题
+
+```javascript
+/*
+*1 带var 和FUNCTION关键字声明相同的名字，这种也算是重名了（其实一个fn存储的值的类型不一样）
+*/
+var fn =12
+function fn(){
+    
+}
+//2关于重名的处理：如果名字重复了不会重新的声明，会重新的定义（重新赋值）【不管是变量提升还是代码执行阶段】
+fn()
+function fn(){console.log(1);}
+fn()
+function fn(){console.log(2);}
+fn()
+var fn =100;
+fn()  //这里fn变成变量 fn not a function 不能作为函数执行
+```
+
