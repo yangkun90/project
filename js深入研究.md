@@ -1,4 +1,4 @@
-## js深入研究
+## js深入研究基础
 
 ```javascript
 var a =12;
