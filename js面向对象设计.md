@@ -80,7 +80,7 @@ var p1 =createPerson('xxx',25);
 var p2 =createPerson('xxx',25);
 ```
 
-### oop
+### oop 和构造函数模式
 
 ```javascript
 //js本身就是面向对象，连函数都是一个特殊的对象。
@@ -169,4 +169,49 @@ console.log('toString' in f);//true toString 是公有属性
 console.log(f.hasOwnProerty('m'));//true
 console.log(f.hasOwnProerty('toString'));//false 非私有属性
 ```
+
+### 原型链解析
+
+```javascript
+/**
+ * 原型链分析
+ * 【函数】
+ *      普通函数，类（所有的类：内置类和自己创建的类Array）
+ * 【对象】
+ *      普通对象、数组、正则、Math、实例也是对象类型（除了基本类型的字面量创建的值）,argument
+ *      prototype 的值也是对象类型的
+ *      函数也是对象类型的
+ *      ....
+ * 1,所有函数数据类型天生自带一个属性prototype 属性，这个属性的值是一个对象。浏览器默认给他开辟一个堆内存。
+ * 2. 在浏览器给prototype开辟的堆内存当中有一个天生自带的属性叫做constructor 存储的是的当前函数本身
+ * 3. 每一个对象都有一个__proto__的属性,这个属性指向当前实例所属类的prototype.(如果不能确定他是谁的实例，都是Obeject的实例)
+ */
+/**
+ * 每个类都把供实例调取的方法存储公共属性方法，存储到自己的原型上(prototype 的作用就是存储一些公共属性和方法供实例调用)
+ * Object的__proto__不存在，因为自己本身就是最基础的类不需要指向别人了。
+ * 实例调取一个属性或者方法的时候：先查是否是自己私有的，如果没有就去查找是否是公有的，一级一级往上查找，如果都不是就undefined.
+ */
+function Fn(){
+    var n = 100;
+    this.AA=function(){
+        console.log('AAA[私]');
+    };
+    this.BB=function(){
+        console.log('BB[私]');
+    }
+}
+Fn.prototype.AA=function(){
+    console.log('AA公')
+}
+var f1=new Fn;
+var f2 = new Fn;
+console.log(f1.n);
+//实例设置属性和方法
+// f1.name=xxx;给自己设置私有属性
+//f2.__proto__.name=xxx; 给原型链上设置公有属性（每个实例都可以使用这个属性）
+//函数或者类设置公有属性方法
+//Fn.prototype.name=xxxx;
+```
+
+
 
