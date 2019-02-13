@@ -65,7 +65,7 @@ function Fn(){
     var n =10;
     this.m=n;
     //return ; 如果直接return 会强制的结束函数执行，不返回实例
-    retrun {name:'哈哈'};//会覆盖返回的实例
+    //retrun {name:'哈哈'};//会覆盖返回的实例
 }
 var f =new Fn();//在构造函数执行的时候如果fn不需要传递实参，我们可以省略小括号
 console.log(f);
