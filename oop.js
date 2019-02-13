@@ -37,3 +37,51 @@ var num1 = 12;
 var num2 = new Number(12);
 console.log(typeof num1);
 console.log(typeof num2);//'object'
+
+//构造函数执行过程
+//1 像普通函数一样形成一个私有的作用域 》 栈内存
+//   形参赋值 --变量提升--私有变量定义完成
+//2  构造函数独有的，js代码自上而下执行前，首先在形成的私有栈创建一个对象（创建一个堆内存：暂时不存放任何东西），并且让函数中的主体（this）指向这个新的堆内存（this===创建的对象）
+//3 代码自上而下的执行。
+//4 构造函数独有，代码执行完成，把之前创建的堆内存地址返回（浏览器默认返回）。 开始创建的对象就是当前函数的一个实例，代码执行中的this.xxx=xxx都是给实例设置“私有的属性”，最后浏览器会把默认的实例返回，供外面接收
+//再次new 就是把上面的操作克隆一份会形成新的内存空间，所以实例独立分开的。
+function Person(name,age){
+    this.name=name;
+    this.age=age;
+    var n =10;
+}
+var p=new Person('张三',18);
+console.log(p);
+
+/**
+ * 构造函数执行，不写return 浏览器会默认返回创建的实例
+ * 但是如果我们写了return 
+ *  1.return 是一个基本数据类型，返回的结果依然是类的实例
+ *  2.如果返回的是引用值，则会把默认返回的实例覆盖，此时接受到的结果不在是实例
+ *  所以最好别返回
+ * 
+ */
+function Fn(){
+    var n =10;
+    this.m=n;
+    //return ; 如果直接return 会强制的结束函数执行，不返回实例
+    retrun {name:'哈哈'};//会覆盖返回的实例
+}
+var f =new Fn();//在构造函数执行的时候如果fn不需要传递实参，我们可以省略小括号
+console.log(f);
+
+// instanceof:检测某个实例是否是这个类的。是返回true 不是返回false
+console.log(f instanceof Fn);//true
+console.log(f instanceof  Array);//true
+console.log(f instanceof Object);//true
+
+//in :检测当前对象是否存在某个属性 不管当前的属性是对象的私有还是公有结果只要有就是true。
+console.log('m' in f);//true
+console.log('toString' in f);//true toString 是公有属性
+//hasOwnPeoperty:检测当前属性是否为对象的私有属性，不仅要有，而且必须是私有的才可以
+console.log(f.hasOwnProerty('m'));//true
+console.log(f.hasOwnProerty('toString'));//false 非私有属性
+
+
+
+
