@@ -113,3 +113,90 @@ console.log(f(5));//5   a=1
 console.log(fn()(5));//5
 console.log(f(5));//5+1=6 a=2
 console.log(a);//2
+
+//No.11
+var ary=[1,2,3,4];//引用类型
+function fn(ary) {
+    //这里有形参ary ，然后内部有个私有变量var ary=外部数组地址
+    ary[0]=0;//[0,2,3,4]
+    ary=[0];//变更了引用
+    ary[0]=100;//[100]
+    return ary;
+}
+var res=fn(ary);
+console.log(ary);//[0,2,3,4]
+console.log(res);//[100]
+
+//No.12
+function fn(i) {
+    //形参i 类似定义一个私有变量var i=undefined;
+    return function (n) {
+        console.log(n + (i++));
+    }
+}
+var f = fn(10);//形参赋值i=10
+f(20);//n=20  20+10=30  i=11
+fn(20)(40);//这里进行重置开辟新的内存栈使用  i=20,n=40 40+20=60
+fn(30)(50);//同上  50+30=80
+f(30);//i=11，闭包具有保存作用。30+11=41 i=12   开发中的惰性方式
+
+//No.13
+var i =10;
+function fn() {
+    return function (n) {
+        console.log(n + (++i)); //这里只是改成前置加好先加后运算
+    }
+}
+var f=fn();
+f(20);
+fn()(20);
+fn()(30);
+f(30);
+
+//No.14
+var num=10;
+var obj={num:20};
+obj.fn=(function (num) {
+    //var num=obj.num=20;
+    this.num=num*3;//私有堆内存this.num=60; this是window 全局num=60
+    num++;//私有变量 num=21
+    return function (n) {
+        //var n ;
+        this.num +=n;
+        num++;
+        console.log(num);
+    }
+})(obj.num);//注意，对象整体是引用但是他的属性的某个值如果是基本数据类型传入的也是基本数据类型
+var fn=obj.fn;
+fn(5);//n=5 this.num this为window 全局num60+5=65 内部num++ 22
+obj.fn(10);//n=10  this为obj  obj.num=20+10=30  num++ 内部 num=23
+console.log(num, obj.num);//65  30
+
+//No.15
+//原型解析
+/**
+ * 1和new Number(1)对比：
+ *  前面是基本数据类型
+ *  后面是引用数据类型
+ *  相同都是数字类型的一个实例
+ */
+
+/**
+ * 函数类型的：
+ *  1.普通函数
+ *  2.构造函数
+ * 对象数据类型：
+ *  1。普通对象
+ *  2.Math\Json..
+ *  3.类的实例(数组，正则，日期。。）
+ *  4.prototype __proto__
+ *  5.arguments或者元素集合等类素组
+ *  6.函数也是特殊的对象
+ *  =>万物皆对象
+ */
+
+/**
+ * 1.每一个函数都有一个prototype 属性 属性值是一个对象:这个对象中存储了当前类供实例调取使用的公有属性和方法。
+ * 2.浏览器默认给原型开辟的堆内存中有一个属性叫做contructer :存储的是当前函数本身
+ * 3.每一个对象实例都有一个__proto__原型链属性，这个属性指向当前实例所属类的原型。如果不确定所属类都指向Object.prototype
+ */
