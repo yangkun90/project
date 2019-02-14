@@ -90,3 +90,11 @@ function fn() {
  */
 
 
+//No.9
+var foo='hello';
+(function (foo) {//形参赋值 foo=hello 变量提升：因为foo已经存在，所以不再声明
+    console.log(foo);//hello
+    var foo=foo||'word';//foo是形参已经赋值所以 foo='hello'
+    console.log(foo);//hello
+})(foo);
+console.log(foo);
