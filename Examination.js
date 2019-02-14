@@ -307,6 +307,7 @@ f2.aa();//20
 f2.__proto__.aa();//NaN this指向是f2.__proto__  里面没有m所以返回undefined 加上10 返回NaN
 
 //数组去重
+//函数方法
 function unique(ary) {
     var obj={};
     for (var i=0;i<arr.length;i++){
@@ -322,3 +323,19 @@ function unique(ary) {
     obj=null;//释放obj占用的空间
     return ary;
 }
+//原型方式 添加一个原型对象公共方法
+Array.prototype.myUnique=function myUnique() {
+    var obj ={};
+    for (var i=1;i<this.length;i++){
+        var itme=this[i];
+        obj.hasOwnProperty(itme)?(this[i]=this[this.length-1],this.length--,i--):obj[itme]=item;
+    }
+    obj=null;
+    return this;
+};
+
+//智力题目
+// document.parentNode和 document.parentnode 的区别?
+//一个返回值是null 一个是undefined
+//规定多人开发函数重名问题
+
