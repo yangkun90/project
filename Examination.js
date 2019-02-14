@@ -97,4 +97,19 @@ var foo='hello';
     var foo=foo||'word';//foo是形参已经赋值所以 foo='hello'
     console.log(foo);//hello
 })(foo);
-console.log(foo);
+console.log(foo);//hello
+
+//No.10
+
+var a =9;
+function fn() {
+    a=0;
+    return function (b) {
+        return b+a++;
+    }
+}
+var f=fn();//a=0
+console.log(f(5));//5   a=1
+console.log(fn()(5));//5
+console.log(f(5));//5+1=6 a=2
+console.log(a);//2
