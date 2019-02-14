@@ -305,3 +305,20 @@ f1.aa();//20
 f2.bb();//报错 没有
 f2.aa();//20
 f2.__proto__.aa();//NaN this指向是f2.__proto__  里面没有m所以返回undefined 加上10 返回NaN
+
+//数组去重
+function unique(ary) {
+    var obj={};
+    for (var i=0;i<arr.length;i++){
+        var item=ary[i];
+        if(obj.hasOwnProperty(item)){
+            //删除检测出来重复的
+            ary.splice(i,1);
+            i--;//防止数组塌陷
+            continue;
+        }
+        obj[item]=item;
+    }
+    obj=null;//释放obj占用的空间
+    return ary;
+}
