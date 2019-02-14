@@ -200,3 +200,108 @@ console.log(num, obj.num);//65  30
  * 2.浏览器默认给原型开辟的堆内存中有一个属性叫做contructer :存储的是当前函数本身
  * 3.每一个对象实例都有一个__proto__原型链属性，这个属性指向当前实例所属类的原型。如果不确定所属类都指向Object.prototype
  */
+function Fn() {
+    this.x=100;
+    this.y=200;
+    this.getX=function () {
+        console.log(this.x);
+    }
+}
+Fn.prototype.getX=function () {
+    console.log(this.x);
+}
+Fn.prototype.getY=function () {
+    console.log(this.y);
+}
+var f1 = new Fn;
+var f2 = new Fn;
+console.log(f1.getX() === f2.getY());//false
+
+//No.16
+/**
+ * 1 元素绑定事件,this是当前操作的元素
+ * 2  方法名前面是否有点，有点，点前面是谁this就是谁，没有this是window 严格模式下是undefined
+ * 3 构造函数执行，方法体中的this是当前类的一个实例
+ *
+ * @type {string}
+ */
+var fullName='language';
+var obj={
+    fullName:"javascript",
+    prop:{
+        getFullName:function () {
+            return this.fullName;
+        }
+    }
+};
+console.log(obj.prop.getFullName());//this undefined
+var test=obj.prop.getFullName();
+console.log(test());//这里的点没了所以 this为全局的 language
+
+//No.17
+var name= 'window';
+var Tom={
+    name:'Tom',
+    show:function () {
+        console.log(this.name);
+    },
+    wait:function () {
+        var fun=this.show;//Tom.show
+        fun();//this.window
+    }
+};
+Tom.wait();//window
+
+//No.18
+function fun() {
+    this.a=0;
+    this.b=function () {
+        alert(this.a);
+    }
+}
+
+/**
+ * 实际开发中基于面向对象开发的时候:构造原型模式
+ * 1,自己开辟的堆内存中没有contructer这个属性,导致类的原型构造函数缺失，解决自己手动增加一个contructer : fun
+ * 2,当原型重定向后，浏览器默认的开辟的那个原型堆内存会被释放掉，如果之前已经存储了一些方法或者属性，这些东西会丢失。(所以内置类的原型不允许重定向到自己开辟的堆内存，因为内置类的原型上带有很多操作方法，重置后悔释放掉)
+ * @type {{b: fun.b, c: fun.c}}
+ */
+fun.prototype={
+    b:function () {
+        this.a=20;
+        alert(this.a);
+    },
+    c:function () {
+        this.a=30;
+        alert(this.a);
+    }
+};
+var my_fun=new fun();
+my_fun.b();//0
+my_fun.c();//30
+
+//题目 构造函数和原型链
+function Fn() {
+    var n =10;
+    this.m=20;
+    this.aa=function () {
+        console.log(this.m);
+    }
+}
+Fn.prototype.bb=function () {
+    console.log(this.n);
+};
+var f1=new Fn;
+Fn.prototype={
+    aa:function () {
+        console.log(this.m + 10);
+    }
+};
+var f2=new Fn;
+console.log(f1.constructor);//Fn
+console.log(f2.constructor);//undefined
+f1.bb();//undefined
+f1.aa();//20
+f2.bb();//报错 没有
+f2.aa();//20
+f2.__proto__.aa();//NaN this指向是f2.__proto__  里面没有m所以返回undefined 加上10 返回NaN
