@@ -1,0 +1,23 @@
+.centerPos(@w:100,@h:100){
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: unit(-(@h/2),px);
+  margin-bottom: unit(-(@w/2),px);
+}
+
+@link-color:#555;
+
+.box{
+  .centerPos(200,200);
+  width: 100px;
+  height: 100px;
+  background: lightblue;
+
+  a{
+    color: @link-color;
+  }
+}
+.hover{
+  color: @link-color;
+}

@@ -10,7 +10,7 @@ console.log(a);//13
 
 //No.2
 console.log(a);//报错，全局不存在变量a,只是在window中存在一个属性a
- a =12;
+a =12;
 function fn(){
     console.log(a);
     a = 13;
@@ -339,3 +339,87 @@ Array.prototype.myUnique=function myUnique() {
 //一个返回值是null 一个是undefined
 //规定多人开发函数重名问题
 
+//面试题
+function Foo() {
+    getName=function () {
+        console.log(1);
+    };
+    return this;
+}
+Foo.getName=function () {
+    console.log(2);
+};
+Foo.prototype.getName=function () {
+    console.log(3);
+};
+var getName=function () {
+    console.log(4);
+};
+function getName() {
+    console.log(5);
+};
+Foo.getName();//2
+getName();//执行全局下的getName 4
+Foo().getName();//当做普通函数执行，返回的结果再调取getName,return window   1
+getName();//1 执行的还是全局下的
+new Foo.getName();// 这里Foo.getName是个整体  2
+new Foo().getName();//3
+new new Foo().getName();//3
+//new 也具有执行函数的意思，只不过和普通函数的区别是可以创建一个实例
+/**
+ * 函数三种角色：
+ * 1 普通函数
+ *  -堆内存释放
+ *  -作用域链
+ * 2 类
+ *  -prototype 原型
+ *  -__proto__ 原型链
+ *  -实例
+ * 3 普通对象
+ *  -和普通的OBJ没啥区别,就是对键值得增删改查
+ *
+ * --三种角色之间没有必然的关系
+ *
+ */
+function Fn(){
+    var n =10;
+    this.m=100;
+}
+Fn.prototype.aa=function () {
+    console.log('aa');
+};
+Fn.bb=function () {
+    console.log('bb');
+};
+//普通函数执行
+Fn();//this->window 有一个私有变量n 和原型和属性bb没有关系
+
+//构造函数执行，就是实例化
+var f =new Fn();//this:f 当前实例对象
+console.log(f.n);//undefined 跟函数中的变量没有关系
+console.log(f.m);//100 实例的私有属性
+f.aa();//->通过__proto__找到Fn.prototype上的方法
+console.log(f.bb());//undefined bb是把fn当中普通对象，和实例没有任何关系
+
+//普通对象
+Fn.bb();//这个执行的是当做对象执行对象中对应属性的方法。‘bb’
+
+//这就是函数的三种状态
+/**
+ * Number() 这个函数
+ * 内部有isNaN 这个只能使用Number.isNaN 这是当做普通对象的方式调用
+ * prototype上也有方法，如toFixed 这个时候使用数字实例就可以调用toFixed了
+ * 其他的内置类也是这种方式，可见，函数这个体本身就是个多状态的生物。
+ */
+//jquery 这个类库中提供了很多方法，一部分写在原型上的，一部分当做普通对象的属性方法来设置的。
+
+
+//题目
+function Fn() {
+    this.n=100;
+}
+Fn.prototype.getN=function () {
+    console.log(this.n);
+};
+Fn.AA=200;
+var f=new Fn();
