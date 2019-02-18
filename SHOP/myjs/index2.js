@@ -50,9 +50,12 @@ let productRender=(function () {
                     }
                     return (aInn-bInn) * this.flag;
                 });
+                let frg=document.createDocumentFragment();
                 productList.forEach(curLi=>{
-                    productBox.appendChild(curLi);
+                    frg.appendChild(curLi);
                 });
+                productBox.appendChild(frg);
+                frg=null;
             };
         });
     };
