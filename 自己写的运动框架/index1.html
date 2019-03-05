@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            width: 80px;
+            height: 80px;
+            background-color: skyblue;
+            position: absolute;
+            top: 107px;
+            left: 186px;
+        }
+    </style>
+</head>
+<body>
+    <div id="box"></div>
+</body>
+<script>
+    var oDiv=document.getElementById('box');
+    animate(oDiv,{"left":701,"top":351},3000);
+    function animate(ele,targetJSON,time,callback) {
+        var interval=null;
+        if(window.navigator.userAgent.indexOf('MSIE')!==-1){
+             interval=50;//动画间隔时间
+        }else{
+             interval=5;//动画间隔时间
+        }
+        var semaphoreJSON={};//当前属性状态
+        for (var k in targetJSON){
+            semaphoreJSON[k]=parseFloat(fetchComputedStyle(ele,k));
+        }
+        var maxcount=time/interval;//总执行的次数
+        var count=0;//总计数
+        var stepJSON={};//步长
+        for (var k in targetJSON){
+            targetJSON[k]=parseInt(targetJSON[k]);
+            stepJSON[k]=(targetJSON[k]-semaphoreJSON[k])/maxcount;
+        }
+
+        var timer=setInterval(function () {
+            for (var k in semaphoreJSON){
+                semaphoreJSON[k]+=stepJSON[k];
+                //改变元素的属性
+                ele.style[k]=semaphoreJSON[k]+'px';
+            }
+            count++;
+            if(count>=maxcount){
+                clearInterval(timer);
+                callback.call(ele);
+                for (var k in targetJSON){
+                    ele.style[k]=targetJSON[k]+'px';
+                }
+            }
+        },interval);
+
+    }
+
+    //之前的轮子，计算后样式
+    function fetchComputedStyle(obj , property){
+        //能力检测
+        if(window.getComputedStyle){
+            //现在要把用户输入的property中检测一下是不是驼峰，转为连字符写法
+            //强制把用户输入的词儿里面的大写字母，变为小写字母加-
+            //paddingLeft  →  padding-left
+            property = property.replace(/([A-Z])/g , function(match,$1){
+                return "-" + $1.toLowerCase();
+            });
+
+            return window.getComputedStyle(obj)[property];
+        }else{
+            //IE只认识驼峰，我们要防止用户输入短横，要把短横改为大写字母
+            //padding-left  → paddingLeft
+            property = property.replace(/\-([a-z])/g , function(match,$1){
+                return $1.toUpperCase();
+            });
+
+            return obj.currentStyle[property];
+        }
+    }
+</script>
+</html>

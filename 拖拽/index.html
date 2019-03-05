@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="reset.min.css">
+    <style>
+        html,body{
+            height: 500%;
+            -webkit-user-select: none;
+
+        }
+        .diaLogMark{
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,.2);
+        }
+        .diaLogBox{
+            position: fixed;
+            width: 200px;
+            z-index: 1001;
+            height: 300px;
+            background-color: #fff;
+        }
+        .diaLogBox h3{
+            position: relative;
+            padding: 0 10px;
+            height: 35px;
+            line-height: 35px;
+            background-color: #ddd;
+            border-bottom: 1px solid #aaa;
+            cursor: move;
+
+        }
+        .diaLogBox h3 i{
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            margin-top: -10px;
+            width: 20px;
+            height: 20px;
+            font-style: normal;
+            line-height: 20px;
+            font-family: "\5FAE\8F6F\96C5\9ED1", Helvetica, sans-serif;
+            text-align: center;
+            background: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="diaLogMark"></div>
+    <div class="diaLogBox">
+        <h3 class="title">
+            请登录信息LOGIN
+            <i>X</i>
+        </h3>
+        <div class="con">
+
+        </div>
+    </div>
+</body>
+<script src="jquery.min.js"></script>
+<script>
+    $(function () {
+        let $diaLogMark=$('.diaLogMark'),
+            $diaLogBox=$('.diaLogBox'),
+            $boxTitle=$diaLogBox.find('.title'),
+            $closeBtn=$boxTitle.find('i');
+        let winW=document.documentElement.clientWidth,
+            winH=document.documentElement.clientHeight,
+            boxW=$diaLogBox[0].offsetWidth,
+            boxH=$diaLogBox[0].offsetHeight;
+        $diaLogBox.css({
+            top:(winH-boxH)/2,
+            left:(winW-boxW)/2,
+        });
+
+        //点击关闭
+        $closeBtn.on('click',function () {
+            $diaLogBox.stop().fadeOut(300,function () {
+                $diaLogMark.hide();
+            });
+        });
+
+        //实现拖拽效果
+        //点击的时候开始
+        let dragStart=function dragStart(ev) {
+
+            this.starX=ev.clientX;
+            this.starY=ev.clientY;
+            this.starL=parseFloat($diaLogBox.css('left'));
+            this.starT=parseFloat($diaLogBox.css('top'));
+            // this.setCapture();//绑定鼠标和H3 不兼容谷歌！
+            //只有按下后才有移动;
+            this.Drag_move=dragMove.bind(this);//存储绑定的方法
+            this.Drag_end=dragEnd.bind(this);//存储绑定的方法
+            $(document).on('mousemove',this.Drag_move).on('mouseup',this.Drag_end);
+        };
+        let dragMove=function dragMove(ev){
+            let {starX,starY,starL,starT}=this;
+            let curL=ev.clientX-starX+starL,
+                curT=ev.clientY-starY+starT;
+            //边界判断
+            let minL=0,minT=0,maxL=winW-boxW,maxT=winH-boxH;
+            curL=curL<minL?minL:(curL>maxL? maxL:curL);
+            curT=curT<minT?minT:(curT>maxT? maxT:curT);
+
+            $diaLogBox.css({
+                left:curL,
+                top:curT,
+            })
+        };
+        let dragEnd=function dragEnd() {
+            //鼠标松开的时候就移出移动时间
+            $(document).off('mousemove',this.Drag_move).off('mouseup',this.Drag_end);
+        };
+        $boxTitle.mousedown(dragStart);
+
+
+    });
+
+    //用一种方式把鼠标和H3绑定到一块防止移出
+    //1 采用setCaputure();绑定，这个是个区域外捕捉方法，但是谷歌不兼容
+    //2 谷歌更简单，你考虑一个问题就是鼠标无法跑出document范围。那么我们为何不在document进行监听 onmouseup
+</script>
+</html>

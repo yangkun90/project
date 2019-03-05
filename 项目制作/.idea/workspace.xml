@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="2d531516-090e-4f91-b9c4-4e0bce8e443e" name="默认更改列表" comment="">
+      <change afterPath="$PROJECT_DIR$/../Vue研究/es6语法总结/es6.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../事件/1.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../事件/2.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../事件/3.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../事件/4.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../事件/5.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../事件/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../事件/事件委托/1.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../事件/基于事件委托折叠菜单/1.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../事件/基于事件委托折叠菜单/1.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../事件/基于事件委托折叠菜单/icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../事件/基于事件委托折叠菜单/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../事件/基于事件委托折叠菜单/jquery.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../事件/基于事件委托折叠菜单/reset.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../事件/放大镜效果/css/manifier.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../事件/放大镜效果/css/reset.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../事件/放大镜效果/img/1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../事件/放大镜效果/img/2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../事件/放大镜效果/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../事件/放大镜效果/js/1.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../事件/放大镜效果/js/jquery.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../事件/鼠标跟随/css/1.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../事件/鼠标跟随/css/reset.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../事件/鼠标跟随/img/apple_1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../事件/鼠标跟随/img/apple_1_bigger.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../事件/鼠标跟随/img/apple_2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../事件/鼠标跟随/img/apple_2_bigger.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../事件/鼠标跟随/img/apple_3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../事件/鼠标跟随/img/apple_3_bigger.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../事件/鼠标跟随/img/apple_4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../事件/鼠标跟随/img/apple_4_bigger.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../事件/鼠标跟随/img/icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../事件/鼠标跟随/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../事件/鼠标跟随/js/1.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../事件/鼠标跟随/js/jquery.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../事件池和等级/1.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../事件池和等级/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../事件池和等级/index1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../事件池和等级/jquery.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../定时异步编程/1.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../定时异步编程/2.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../定时异步编程/3.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../定时异步编程/4.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../定时异步编程/5.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../定时异步编程/6.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../定时异步编程/7.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../定时异步编程/animate.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../定时异步编程/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../定时异步编程/轮播图/img/banner1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../定时异步编程/轮播图/img/banner2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../定时异步编程/轮播图/img/banner3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../定时异步编程/轮播图/img/banner4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../定时异步编程/轮播图/img/default.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../定时异步编程/轮播图/img/pre.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../定时异步编程/轮播图/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../定时异步编程/轮播图/js/animate.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../定时异步编程/轮播图/js/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../定时异步编程/轮播图/json/banner.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../定时异步编程/轮播图/json/banner2.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../拖拽/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../拖拽/jquery.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../拖拽/reset.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../自己写的运动框架/animate-2.0.1.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../自己写的运动框架/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../自己写的运动框架/index1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/美团PC/css/common.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/美团PC/css/footer.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/美团PC/css/header.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/美团PC/css/index.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/美团PC/css/reset.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/美团PC/detail.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/美团PC/img/1yuan.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/美团PC/img/area.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/美团PC/img/arrow-t.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/美团PC/img/arrow.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/美团PC/img/base.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/美团PC/img/business.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/美团PC/img/food-title-gary.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/美团PC/img/food-title-white.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/美团PC/img/food-title.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/美团PC/img/food-title1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/美团PC/img/footer-end.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/美团PC/img/footer-right.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/美团PC/img/guoqi.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/美团PC/img/hot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/美团PC/img/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/美团PC/img/manyi.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/美团PC/img/meiri.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/美团PC/img/nav1-gray.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/美团PC/img/nav1-white.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/美团PC/img/nav1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/美团PC/img/nav2-gray.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/美团PC/img/nav2-white.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/美团PC/img/nav2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/美团PC/img/nav3-gray.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/美团PC/img/nav3-white.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/美团PC/img/nav3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/美团PC/img/nav4-gray.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/美团PC/img/nav4-white.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/美团PC/img/nav4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/美团PC/img/nav5-gray.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/美团PC/img/nav5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/美团PC/img/nav6-gray.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/美团PC/img/nav6-white.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/美团PC/img/nav6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/美团PC/img/nav7-gray.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/美团PC/img/nav7-white.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/美团PC/img/nav7.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/美团PC/img/pingjia.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/美团PC/img/shop1.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/美团PC/img/src/beauty.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/美团PC/img/src/fineFood.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/美团PC/img/src/footer.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/美团PC/img/src/hotel.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/美团PC/img/src/life.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/美团PC/img/src/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/美团PC/img/src/movie.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/美团PC/img/src/nav.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/美团PC/img/src/recommend.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/美团PC/img/src/recreation.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/美团PC/img/src/top.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/美团PC/img/src/travel.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/美团PC/img/star-hover.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/美团PC/img/star.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/美团PC/img/tui.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/美团PC/img/tuijian1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/美团PC/img/tuijian2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/美团PC/img/tuijian3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/美团PC/img/tuijian4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/美团PC/img/tuijian5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/美团PC/img/tuijian6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/美团PC/img/tuijian7.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/美团PC/img/tuijian8.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/美团PC/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/美团PC/js/jquery.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/美团PC/list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../复习/3.js" beforeDir="false" afterPath="$PROJECT_DIR$/../复习/3.js" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/.tmp/" />
+    <ignored path="$PROJECT_DIR$/temp/" />
+    <ignored path="$PROJECT_DIR$/tmp/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/美团PC/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2300">
+              <caret line="277" selection-start-line="277" selection-end-line="277" />
+              <folding>
+                <element signature="n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#style#0;n#a#0;n#li#0;n#ul#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#li#6;n#ul#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#div#1;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#div#2;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#ul#0;n#div#0;n#div#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" />
+                <element signature="e#9669#9675#0" expanded="true" />
+                <element signature="n#div#11;n#body#0;n#html#0;n#!!top" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/美团PC/css/footer.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1288">
+              <caret line="56" selection-start-line="56" selection-end-line="56" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/美团PC/css/header.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="5635">
+              <caret line="245" selection-start-line="245" selection-end-line="245" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/美团PC/css/index.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="771">
+              <caret line="101" column="23" selection-start-line="101" selection-start-column="23" selection-end-line="101" selection-end-column="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="JavaScript File" />
+        <option value="CSS File" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>width</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/美团PC/css/index.html" />
+        <option value="$PROJECT_DIR$/美团PC/css/index.js" />
+        <option value="$PROJECT_DIR$/美团PC/css/header.css" />
+        <option value="$PROJECT_DIR$/美团PC/css/footer.css" />
+        <option value="$PROJECT_DIR$/美团PC/index.html" />
+        <option value="$PROJECT_DIR$/美团PC/css/index.css" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="361" />
+    <option name="width" value="1400" />
+    <option name="height" value="1047" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane" />
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Administrator\Desktop\123备份\project\项目制作\美团PC\img" />
+      <recent name="C:\Users\Administrator\Desktop\123备份\project\项目制作\美团PC\js" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2d531516-090e-4f91-b9c4-4e0bce8e443e" name="默认更改列表" comment="" />
+      <created>1551534456962</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1551534456962</updated>
+      <workItem from="1551534458147" duration="5807000" />
+      <workItem from="1551579969530" duration="4712000" />
+      <workItem from="1551594183134" duration="16721000" />
+      <workItem from="1551668877435" duration="8241000" />
+      <workItem from="1551769525171" duration="7000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="35488000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="361" y="0" width="1400" height="1047" extended-state="0" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2496329" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Terminal" order="9" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="调试" order="11" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/美团PC/img/arrow.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/美团PC/css/index.html" />
+    <entry file="file://$PROJECT_DIR$/美团PC/css/index.js" />
+    <entry file="file://$PROJECT_DIR$/美团PC/js/jquery.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="318">
+          <caret line="1" column="25105" selection-start-line="1" selection-start-column="25105" selection-end-line="1" selection-end-column="25105" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/美团PC/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2300">
+          <caret line="277" selection-start-line="277" selection-end-line="277" />
+          <folding>
+            <element signature="n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#style#0;n#a#0;n#li#0;n#ul#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#li#6;n#ul#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#div#1;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#2;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#ul#0;n#div#0;n#div#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" />
+            <element signature="e#9669#9675#0" expanded="true" />
+            <element signature="n#div#11;n#body#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/美团PC/css/footer.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1288">
+          <caret line="56" selection-start-line="56" selection-end-line="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/美团PC/css/header.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5635">
+          <caret line="245" selection-start-line="245" selection-end-line="245" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/美团PC/css/index.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="771">
+          <caret line="101" column="23" selection-start-line="101" selection-start-column="23" selection-end-line="101" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

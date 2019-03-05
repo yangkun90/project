@@ -1,0 +1,257 @@
+/*
+每个页面公有的样式
+ */
+#top{background:#f9f9f9;broder:1px solid #eee;border-left: 0;border-right: 0;}
+.top{height: 30px;}
+.top-user{}
+.top-user>li{height: 30px;float: left;line-height: 30px;}
+.top-user>li>a{padding: 0 9px;}
+.top-user>.collec>a{padding-left: 20px;background: url(../img/star.png) no-repeat;}
+.top-user>.collec>a:hover{background:url(../img/star-hover.png) no-repeat;}
+.load>a{
+    color: #f76120;}
+.reg>a{
+    border-right: 1px solid #ccc;}
+
+.top-info{}
+.top-info>li{
+    float: left;
+    height: 30px;line-height: 30px;
+    position: relative;}
+.top-info>li>a{padding: 0 22px 0 11px;
+    border-right: 1px solid #ccc;}
+.top-info>li i.sanjiao{
+    position: absolute;
+    right: 8px;
+    top: 13px;
+    height: 0;
+    width: 0;
+    border: 4px solid transparent;
+    border-top-color: #666;
+    cursor: pointer;
+}
+
+.cover{
+    position: absolute;
+    left: -2px;
+    right: 0;
+    top: 0;
+    bottom: 2px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-top: 0;
+    border-bottom: 0;
+    padding-left: 11px;
+    line-height: 30px;
+    color: #2bb8aa;
+    display: none;
+}
+.sanjiaot{position: absolute;
+    right: 8px;
+    top: 9px;
+    height: 0;
+    width: 0;
+    border: 4px solid transparent;
+    border-bottom-color: #2bb8aa;
+    cursor: pointer;
+    display: none;
+}
+.cover-list{
+    position: absolute;
+    top: 27px;
+    right: 0;
+    border:1px solid #ccc;
+    left: -10px;
+    background-color: #fff;
+    min-width: 20px;
+    display: none;
+}
+
+.cover-list >ul{
+    padding:15px;
+}
+.cover-list >ul>li{
+    text-align: center;
+}
+.top-info>li:hover .cover,
+.top-info>li:hover .sanjiaot,
+.top-info>li:hover .cover-list{
+    display: block;
+}
+
+/*logo*/
+#logo{
+    height: 111px;
+    padding-top: 19px;
+}
+.logo{}
+.logo>h1{
+    display: inline-block;}
+.logo>ul{
+    display: inline-block; position: relative;vertical-align:top;
+    top: 5px;}
+.city{
+    font-size: 18px;
+    color: #000;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+.city-btn{
+    border:1px solid #ccc;
+    padding: 5px 8px;
+}
+.city-btn a{
+    font-size:12px;
+}
+
+/* 中间的搜索区域 */
+.search{margin-left:200px;}
+.search-top{border:2px solid #2bb8aa; width:484px; height:38px; cursor:pointer;}
+
+.search-top>input{float:left; border:0; height:100%; width:345px; outline: none; padding-left:5px;}
+.search-top>button{float:left;}
+.tuangou{height:100%; border:0; border-right:1px solid #ccc; background:#fff; padding-left:14px; padding-right:21px; line-height: 38px; font-size:14px; color:#666; position:relative; outline: none;}
+.tuangou>i{top:16px;}
+.tuangou>i.sanjiaot{top:12px;}
+.tuangou-toggle{position: absolute;left:-1px; top:37px;right:-1px; border:1px solid #ccc; border-top:0; background: #fff; display:none;}
+.tuangou:hover>.tuangou-toggle{display: block;}
+.search-top>.sousuo{float:right; width:63px; height:100%; background:#2bb8aa; border:0; color:#fff; font-size:14px; outline: none;text-align: center;
+    line-height: 38px;}
+.href-list{padding-top:10px;}
+.href-list>a{margin:15px; margin-left:0;}
+
+.tui{
+    position: relative;
+    top: 6px;}
+.tui>li{
+    float: left;
+    text-align: center;
+    margin:0 8px;
+    position: relative;
+}
+.tui>li>a{
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+}
+
+/*logo*/
+
+
+/*nav*/
+#nav{
+    height: 40px;
+    background-color: #2bb8aa;
+}
+#nav a{
+    color: #fff;
+    text-decoration: none;
+}
+#nav>h2{
+    height: 100%;
+    width: 232px;
+    padding-left: 15px;
+    line-height: 40px;
+    position: relative;}
+#nav>h2:hover .subnav{
+    display: block;
+}
+#nav>h2:hover>span{
+    background-position: -289px -2px;
+}
+#nav>.list{
+    padding-left: 5px;}
+#nav>.list>li{
+    height: 40px;
+    line-height: 40px;
+    padding: 0 23px;}
+#nav>.list>li a{
+    font-size: 14px;
+}
+#nav>.list>li:hover{
+    background-color: #00c3b0;
+}
+.subnav{
+    background-color: #fafafa;
+    position: absolute;
+    left: 0;
+    top: 40px;
+    right: 0;
+    display: none;
+}
+#nav>h2>span{
+    position: absolute;
+    width: 31px;
+    height: 19px;
+    background: url("../img/arrow.png") no-repeat -320px -2px;
+    right: 15px;
+    top: 10px;}
+#nav .subnav a{
+    color: #000;
+}
+#nav .subnav a.fr{
+    color: #666666;
+    font-size: 12px;
+}
+.subnav>.list{
+    padding: 0 10px;
+    border: 1px solid #eee;
+    border-top: 0;
+    height: 477px;
+}
+.subnav>.list>li{
+    padding-right: 6px;
+    border-bottom: 1px solid #eeeeee;
+    line-height: 52px;
+    height: 52px;
+    position: relative;
+}
+.subnav>.list>li>.line{
+
+}
+.subnav>.list>li>.t{
+    position: absolute;
+    width: 1px;
+    height: 52px;
+    right: -11px;
+    background: #fff;
+    top: 0;
+}
+.subnav>.list>li>.l{
+    position: absolute;
+    width: 13px;
+    height: 1px;
+    right: -10px;
+    background: #eee;
+    bottom: -1px;
+
+}
+.subnav>.list>li>.d{
+    position: absolute;
+    width: 13px;
+    height: 1px;
+    right: -10px;
+    background: #eee;
+    top: -1px;
+
+}
+.subnav>.list>li>.dis{
+    display: none;
+}
+.subnav>.list>li:hover>.dis{
+    display: block;
+}
+
+.threenav{
+    position: absolute;
+    left: 235px;
+    top: 0;
+    height: 477px;
+    background: #fff;
+    width: 200px;
+    border-right: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+}
+/*nav*/

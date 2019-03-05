@@ -1,0 +1,48 @@
+html,body{
+    height: 100%;
+    overflow: hidden;
+}
+.menuBox{
+    width: 300px;
+    height: 100%;
+    overflow: auto;
+    background:-webkit-linear-gradient(top left,lightblue,lightcyan,lightpink,lightgoldenrodyellow);
+}
+.menuBox li{
+    position: relative;
+}
+.menuBox li span{
+    line-height: 30px;
+    font-size: 14px;
+    padding-left: 20px;
+    cursor: pointer;
+}
+.menuBox li em{
+    position: absolute;
+    left: 0;
+    top: 7px;
+    width: 16px;
+    height: 16px;
+    background: url("icon.png") no-repeat;
+}
+.menuBox li em.plus{
+    background-position: -59px -28px;
+}
+.menuBox li em.minus{
+    background-position: -42px -29px;
+}
+.menuBox .level1{
+    margin-left: 10px;
+}
+.menuBox .level2{
+    margin-left: 20px;
+}
+.menuBox .level3{
+    margin-left: 30px;
+}
+.menuBox .level4{
+    margin-left: 40px;
+}
+.menuBox ul:not(.level1){
+    display: none;
+}

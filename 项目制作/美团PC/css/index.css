@@ -1,0 +1,104 @@
+#nav>h2 .subnav{
+    display: block;}
+
+#recommend{
+    height: 478px;}
+.recommend{margin-left: 247px;
+    height: 100%;
+    padding-left: 18px;}
+.recommend .list{}
+.recommend .list li{
+    height: 52px;
+    border-bottom: 1px solid #eee;
+line-height: 52px}
+.recommend .list span{padding-left: 15px;}
+.recommend .list i{background: url(../img/hot.png) no-repeat 0 0;vertical-align: middle;
+    width: 16px;
+    height: 22px;
+    display: inline-block;}
+.recommend .list a{
+    padding: 0 12px;}
+
+.recommend .show{
+    width: 689px;
+    height: 318px;
+    border-bottom: 1px solid #eeeeee;overflow: hidden;
+    position: relative;}
+.picshop{
+    height: 100%;width: 600%}
+.picshop li{
+    width: 689px;
+    height: 100%;
+    font-size: 50px;
+    float: left;
+}
+.recommend .show>div{position: absolute;
+    top: 50%;margin-top:-20px;
+    height: 39px;
+    background: url("../img/arrow-t.png") no-repeat;}
+.recommend .show .btnLeft{
+    left: 0;
+    background-position: 0 -151px;
+    width: 30px;}
+.recommend .show .btnRight{
+    right: 0;
+    background-position: 0 -228px;
+    width: 60px;
+    line-height: 39px;
+    font-size: 16px;}
+
+.single-recommend.fr{padding-top: 10px;
+
+    position: relative;}
+.single-recommend.fl{padding-top: 10px;
+    padding-right: 11px;position: relative}
+.single-recommend>img{}
+.single-recommend>h4{font-size: 14px;line-height: 14px}
+.single-recommend>p{
+    font-size: 12px;line-height: 12px;margin-top: 7px}
+.single-recommend>.price{
+    position: absolute;
+    right: 0;
+    color: red;
+    font-size: 30px;
+    bottom: 0px;}
+
+.single-recommend-line{
+    width: 1px;
+    background: #eee;
+    height: 318px;}
+
+.model-title{padding-top: 30px;padding-bottom: 13px;overflow: hidden;}
+.model-title>h3{padding-left: 50px; position:relative;
+    height: 35px;
+    line-height: 35px;}
+.model-title>h3>i{
+    background:url("../img/nav1.png") no-repeat;
+    position: absolute;
+    width: 43px;
+    height: 35px;
+    top: 0;
+    left: 0;}
+.model-title>h3>a{
+    font-size: 20px;
+text-decoration: none;}
+.model-title>ul{
+    position: relative;
+    top: 5px;}
+.model-title>ul>li{
+    display: inline-block;}
+.model-title>ul a{
+    font-size: 4px;
+    border-right: 1px solid #eeeeee;
+    padding-right: 15px;
+    padding-left: 10px;}
+.model-title>ul .all{
+    padding-left: 15px;
+}
+.model-content{
+    height: 400px;}
+.model-end{
+    height: 48px;text-align: center;line-height: 48px;
+    background: #f6f6f6;}
+.model-end>a{
+    font-size: 14px;}
